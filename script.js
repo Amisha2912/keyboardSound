@@ -1,6 +1,7 @@
 const mainBox=document.querySelector('.main-content');
 const keys=document.querySelector('#getKey');
 const code=document.querySelector('#displayCode');
+let audio = document.getElementById("myAudio");
 let pressedKeys = '';
 
 window.addEventListener('load',()=>{
@@ -14,7 +15,7 @@ document.addEventListener('keydown',(event)=>{
     console.log(event);
 
     //adding sound
-    let audio = document.getElementById("myAudio");
+    
     audio.play();
 
     keys.innerHTML = ''; 
