@@ -32,20 +32,27 @@ document.addEventListener('keydown',(event)=>{
     
     else if (event.key === 'Control' || event.key === 'Shift' || event.key === 'Alt' || event.key === 'AltGraph') { 
         if (pressedKeys !== '' && !pressedKeys.includes(event.key)) { 
+            //Checks if another key is already stored in pressedKeys & Ensures the same modifier key isn’t repeated 
             pressBtn.innerHTML = `You pressed ${event.key} + ${pressedKeys}`; 
             display.innerHTML = `Key codes are ${pressedKeys + event.keyCode}`; 
             keys.appendChild(pressBtn); 
             code.appendChild(display);
             pressedKeys = ''; 
         } 
+
+        //This handles the case where no key combination is detected and Updates pressedKeys with the modifier key . Displays the single modifier key and its code
         else { 
-            pressedKeys = event.key; pressBtn.innerHTML = `You pressed ${event.key}`; display.innerHTML = `The key code is ${event.keyCode}`; 
+            pressedKeys = event.key; 
+            pressBtn.innerHTML = `You pressed ${event.key}`; 
+            display.innerHTML = `The key code is ${event.keyCode}`; 
             keys.appendChild(pressBtn); 
             code.appendChild(display);
          
         } 
     } 
+    // Handles cases where the pressed key isn’t a modifier
     else { 
+        // Checks if a modifier key was already pressed
         if (pressedKeys !== '') { 
             pressBtn.innerHTML = `You pressed ${pressedKeys} + ${event.key}`; 
             display.innerHTML = `Key codes are ${pressedKeys} + ${event.keyCode}`; 
