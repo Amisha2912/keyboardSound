@@ -23,7 +23,7 @@ The **Keycode Keyboard** is a web-based application that captures and displays k
 - Tested for consistent behavior across browsers.
 
 ## Live Demo
-Experience the project live at: [Keycode Keyboard Live](#) (Replace `#` with the actual live link.)
+Experience the project live at: [Keycode Keyboard Live](https://amisha2912.github.io/keyboardSound/)
 
 ## How It Works
 1. Press any key to see its name and key code.
